@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "web4kris",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}
