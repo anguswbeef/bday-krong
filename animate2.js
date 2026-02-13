@@ -10,4 +10,4 @@ const character = document.getElementById("object1");
 setInterval(() => {
 index = (index + 1) % images.length;
 character.src = images[index];
-}, 500);
+}, 700);
