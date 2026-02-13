@@ -21,4 +21,4 @@ setInterval(() => {
   
   character1.src = images1[index1];
   character2.src = images2[index2];
-}, 500);
+}, 700);
