@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f4dc;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 98svh;
+  border: 8px solid #b76a6a;
+  background: repeating-linear-gradient(
+    90deg,
+    #f3f0cf 0px,
+    #f3f0cf 45px,
+    #d9d9d9 45px,
+    #d9d9d9 90px
+  );
+  overflow: hidden;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* START PAGE */
+
+#startStar {
+  width: 48vw;
+  max-width: 220px;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  animation: wiggleMain 3s infinite;
+}
+
+.click-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5.5vw;
+  color: #f3d7cf;
+  pointer-events: none;
+  z-index: 6;
+}
+
+@keyframes wiggleMain {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(10deg); }
+  50%  { transform: rotate(-10deg); }
+  75%  { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* MESSAGE PAGE */
+
+#mainStar {
+  width: 85vw;
+  max-width: 450px;
+  position: relative;
+  z-index: 5;
+  transition: transform 1.2s ease;
+  animation: wiggleMain 0.8s ease;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6vw;
+  color: #f3d7cf;
+  z-index: 6;
+}
+
+/* STAR BASE */
+
+.star {
+  position: absolute;
+  pointer-events: auto;
+  --rotation: 0deg;
+  transform: rotate(var(--rotation)) scale(1);
+}
+
+.star:hover {
+  animation: beat 0.6s ease;
+}
+
+@keyframes beat {
+  0%, 100% { transform: rotate(var(--rotation)) scale(1); }
+  25% { transform: rotate(var(--rotation)) scale(1.2); }
+  50% { transform: rotate(var(--rotation)) scale(1); }
+  75% { transform: rotate(var(--rotation)) scale(1.1); }
+}
+
+/* STARS */
+
+.blue1 {
+  width: 35vw;
+  left: -22%;
+  top: 48%;
+  --rotation: 0deg;
+}
+
+.blue2 {
+  width: 20vw;
+  right: -1%;
+  top: 60%;
+  --rotation: -50deg;
+}
+
+.yellow1 {
+  width: 42vw;
+  left: 18%;
+  bottom: 15%;
+  --rotation: -50deg;
+}
+
+.yellow2 {
+  width: 35vw;
+  right: 5%;
+  top: 20%;
+  --rotation: 0deg;
+}
+
+.green1 {
+  width: 50vw;
+  left: 3%;
+  top: 5%;
+  --rotation: 25deg;
+}
+
+.green2 {
+  width: 35vw;
+  right: -6%;
+  bottom: 5%;
+  --rotation: 0deg;
+}
+
+.purple1 {
+  width: 55vw;
+  left: -15%;
+  bottom: -10%;
+  --rotation: -50deg;
+}
+
+.purple2 {
+  width: 60vw;
+  right: -20%;
+  top: -10%;
+  --rotation: 0deg;
+}
+
+/* CHARACTERS */
+
+.baymax1,
+.jiji1 {
+  position: absolute;
+  width: 20vw;
+  max-width: 140px;
+  z-index: 10;
+}
+
+.baymax1 {
+  right: 10%;
+  top: 45%;
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+
+.jiji1 {
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+}
+
+/* BUTTONS */
+
+.button,
+.begButton {
+  position: absolute;
+  bottom: 7%;
+  right: 36%;
+  width: 25vw;
+  max-width: 300px;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.xButton,
+.backButton {
+  position: absolute;
+  top: 30.3%;
+  width: 50vw;
+  max-width: 35px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.xButton {
+  right: 8%;
+}
+
+.backButton {
+  right: 20%;
+}
+
+/* WISHES PAGE */
+
+.window-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 230vw;
+  max-width: 370px;
+  z-index: 2;
+}
+
+.window-img {
+  width: 100%;
+  display: block;
+}
+
+.wishes-content {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+  font-size: 4vw;
+  color: #632929;
+  z-index: 3;
+}
+
+/* DECORATIONS */
+
+.bread-img {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 280px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.breadEnd {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 280px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.bywho {
+  position: absolute;
+  right: 3%;
+  bottom: 1%;
+  color: #632929;
+}
+
+.tgt {
+  position: absolute;
+  left: 5%;
+  bottom: 30%;
+  width: 85vw;
+  max-width: 500px;
+  transition: transform 1.2s ease;
+  z-index: 10;
+}
