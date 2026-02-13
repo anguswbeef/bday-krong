@@ -268,7 +268,7 @@ body {
   transform: translateX(-50%);
   width: 100vw;
   max-width: 280px;
-  z-index: 2;
+  z-index: 20;
   pointer-events: none;
 }
 
